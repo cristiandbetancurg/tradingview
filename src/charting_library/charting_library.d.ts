@@ -25110,17 +25110,7 @@ export interface TRIXIndicatorOverrides {
 	"trix.color": string;
 	[key: string]: StudyOverrideValueType;
 }
-export interface TableFormatterInputs<T extends TableFormatterInputValues = TableFormatterInputValues> {
-	/** Array of values to be formatted. Values are obtained by extracting dependent properties from the data object. */
-	values: T extends [
-		...args: infer A
-	] ? [...A,] : never;
 
-	/** Optional field. It is array of previous values so you can compare and format accordingly. It exists if current column has the `highlightDiff: true` key. */
-	prevValues?: Partial<T extends [
-		...args: infer A		
-	] ? [...A,] : never;
-}
 /**
  * Override properties for the Text drawing tool.
  */
