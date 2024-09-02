@@ -25115,11 +25115,12 @@ export interface TableFormatterInputs<T extends TableFormatterInputValues = Tabl
 	values: T extends [
 		...args: infer A
 	] ? [
-		...A
+		...A,
 	] : never;
 	/** Optional field. It is array of previous values so you can compare and format accordingly. It exists if current column has the `highlightDiff: true` key. */
 	prevValues?: Partial<T extends [
 		...args: infer A
+		
 	] ? [
 		...A
 	] : never>;
