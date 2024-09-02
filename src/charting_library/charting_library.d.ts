@@ -27305,9 +27305,11 @@ export type GetNewsFunction = (symbol: string, callback: (response: GetNewsRespo
  * of GMT have a positive sign and those east have a negative
  * sign in their name (e.g "Etc/GMT-14" is 14 hours ahead of GMT).
  */
-export type GmtTimezoneId = `Etc/GMT${'+' | '-'}${number}${':' | ''}${number}`;
+export type GmtTimezoneId = 
+    `Etc/GMT+${number}${':' | ''}${number}` | 
+    `Etc/GMT-${number}${':' | ''}${number}`;
 export type GroupLockState = "Locked" | "Unlocked" | "Partial";
-export type GroupVisibilityState = "Visible" | "Invisible" | "Partial";
+export type GroupVisibilityState = "Visible" | "Invisible" | "Partial"; 
 /**
  * Mode can be of the following:
  *
